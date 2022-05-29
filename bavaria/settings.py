@@ -15,7 +15,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env('DEBUG')
+DEBUG = eval(env('DEBUG'))
 
 ALLOWED_HOSTS = env('ALLOWED_HOSTS').split(' ')
 
@@ -32,6 +32,11 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'django_cleanup',
     'imagekit',
+    'fontawesomefree',
+    
+    # add app
+    'core.apps.CoreConfig',
+    'clinic.apps.ClinicConfig',
 ]
 
 MIDDLEWARE = [
@@ -116,6 +121,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 # STATIC_ROOT = BASE_DIR / 'static'
 STATIC_DIR = BASE_DIR / 'static'
+STATICFILES_DIRS = [STATIC_DIR]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'

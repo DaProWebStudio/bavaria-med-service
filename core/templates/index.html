@@ -1,0 +1,341 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Header Start -->
+<div class="container-fluid header bg-white p-0">
+    <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+        <div class="col-md-6 p-3 p-lg-5 mt-lg-5">
+            <h1 class="display-5 animated fadeIn mb-4">
+                Лечение в <span class="text-primary">Германии</span></h1>
+            <p class="animated fadeIn mb-4 pb-2">«Bavaria Med Service» — это сообщество практикующих в Германии врачей и медицинских менеджеров. Мы объединили специалистов современной медицины, чтобы организовать для вас эффективное лечение и врачебную помощь в лучших немецких клиниках. Мы поможем вам решить самые сложные проблемы лечения благодаря современной аппаратуре лучших немецких клиник.</p>
+            <a href="" class="btn btn-primary py-3 px-4 me-3 animated fadeIn">Оформить заявку на лечение</a>
+        </div>
+        <div class="col-md-6 animated fadeIn">
+            <div class="owl-carousel header-carousel">
+                <div class="owl-carousel-item">
+                    <img class="img-fluid" src="{% static 'images/main/clinics/carousel-1.jpg' %}" alt="">
+                </div>
+                <div class="owl-carousel-item">
+                    <img class="img-fluid" src="{% static 'images/main/clinics/carousel-2.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header End -->
+
+<!-- Search Start -->
+<div class="container-fluid bg-primary mb-5 py-4 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row g-2 mega-banner">
+            <div class="col-lg-3 col-md-6 col-12">
+                <h4><a href="#">Роды и педиатрия</a></h4>
+                <p>Разные аспекты проведения родов и лечения детей в Германии.</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <h4><a href="#">Онкологические заболевания</a></h4>
+                <p>Германия — одна из самых успешных стран на фронте войны с раком.</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <h4><a href="#">Кардиология</a></h4>
+                <p>Сложные операции на сердце под силу опытным врачам из Германии.</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <h4><a href="#">Урология и лечение простаты</a></h4>
+                <p>Подробности о лечении мужского здоровья в Германии.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Search End -->
+
+
+<!-- About Start -->
+<div class="container-xxl py-5 diagnostics">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                <div class="about-img position-relative overflow-hidden p-5 pe-0">
+                    <img class="img-fluid w-100" src="{% static 'images/main/luchevaya-diagnostika-657575.jpg' %}">
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                <h2 class="mb-4">Программы по диагностике все включено</h2>
+                <p class="mb-4">
+                    Эффективное лечение в Европе невозможно без качественной диагностики. Поэтому, прежде чем планировать лечение в Германии, 
+                    необходимо приложить выяснение природы заболевания. Диагностика в Германии включает широкие лабораторные исследования, 
+                    магнитно-резонансную томографию внутренних органов, ультразвуковое исследование и ряд других тестов.
+                </p>
+                <p>
+                    Фирма БаварияМед предлагает прохождениеи полной и лучших немецких клиниках. Срок всех диагностических процедур от одного дня до одной недели.
+                     В немецких клиниках вам будет обеспечен профессиональный подход. Вы сможете совместить диагностическую программу с деловой поездкой, 
+                     если у вас и вашей компании есть какие-либо интересы в Германии.
+                </p>
+                
+                <a class="btn btn-primary py-3 px-5 mt-3" href="">Подробнее</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+<!-- Property List Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-0 gx-5 align-items-end">
+            <div class="col-12">
+                <div class="text-start mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="mb-3">Наши клиники</h1>
+                    <p>Все клиники в Германии, с которыми мы сотрудничаем — это учреждения высочайшего уровня, оборудованные по последнему слову техники, в которых работают самые высококвалифицированные специалисты не только из Германии, но и из многих стран мира.</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="tab-content">
+            <div id="university" class="tab-pane fade show p-0 active">
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="{% static 'images/main/clinics/kliniki-Myunkhena.jpg' %}" alt=""></a>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">
+                                    Мюнхен
+                                </div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <a class="d-block h5 mb-2" href="">Клиника Швабинг</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>г. Бишкек, проспект Чуй 215</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="{% static 'images/main/clinics/kliniki-Myunkhena.jpg' %}" alt=""></a>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">
+                                    Мюнхен
+                                </div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <a class="d-block h5 mb-2" href="">Клиника Швабинг</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>г. Бишкек, проспект Чуй 215</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="{% static 'images/main/clinics/kliniki-Myunkhena.jpg' %}" alt=""></a>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">
+                                    Мюнхен
+                                </div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <a class="d-block h5 mb-2" href="">Клиника Швабинг</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>г. Бишкек, проспект Чуй 215</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="{% static 'images/main/clinics/kliniki-Myunkhena.jpg' %}" alt=""></a>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">
+                                    Мюнхен
+                                </div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <a class="d-block h5 mb-2" href="">Клиника Швабинг</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>г. Бишкек, проспект Чуй 215</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="{% static 'images/main/clinics/kliniki-Myunkhena.jpg' %}" alt=""></a>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">
+                                    Мюнхен
+                                </div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <a class="d-block h5 mb-2" href="">Клиника Швабинг</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>г. Бишкек, проспект Чуй 215</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="{% static 'images/main/clinics/kliniki-Myunkhena.jpg' %}" alt=""></a>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">
+                                    Мюнхен
+                                </div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <a class="d-block h5 mb-2" href="">Клиника Швабинг</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>г. Бишкек, проспект Чуй 215</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    
+                    <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
+                        <a class="btn btn-primary py-3 px-5" href="">Показать все</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- Property List End -->
+
+<!-- Team Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h1 class="mb-3">Наши врачи</h1>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="team-item rounded overflow-hidden">
+                    <div class="position-relative">
+                        <img class="img-fluid" src="{% static 'images/main/medical/team-1.jpg' %}" alt="">
+                    </div>
+                    <div class="text-center p-4 mt-3">
+                        <h5 class="fw-bold mb-0">Full Name</h5>
+                        <small>Designation</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="team-item rounded overflow-hidden">
+                    <div class="position-relative">
+                        <img class="img-fluid" src="{% static 'images/main/medical/team-2.jpg' %}" alt="">
+                    </div>
+                    <div class="text-center p-4 mt-3">
+                        <h5 class="fw-bold mb-0">Full Name</h5>
+                        <small>Designation</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="team-item rounded overflow-hidden">
+                    <div class="position-relative">
+                        <img class="img-fluid" src="{% static 'images/main/medical/team-3.jpg' %}" alt="">
+                    </div>
+                    <div class="text-center p-4 mt-3">
+                        <h5 class="fw-bold mb-0">Full Name</h5>
+                        <small>Designation</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="team-item rounded overflow-hidden">
+                    <div class="position-relative">
+                        <img class="img-fluid" src="{% static 'images/main/medical/team-4.jpg' %}" alt="">
+                    </div>
+                    <div class="text-center p-4 mt-3">
+                        <h5 class="fw-bold mb-0">Full Name</h5>
+                        <small>Designation</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+
+    <!-- Call to Action Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="bg-dark rounded p-3">
+                <div class="bg-white rounded p-4" style="border: 1px dashed rgba(0, 185, 142, .3)">
+                    <div class="row g-5 align-items-center">
+                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                            <img class="img-fluid rounded w-100" src="{% static 'images/call-to-action.jpg' %}" alt="">
+                        </div>
+                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                            <div class="mb-4">
+                                <h1 class="mb-3">Наши контакты</h1>
+                                <p style="line-height: 2.5;">
+                                    <span><i class="fa fa-phone"></i><span> Телефон: </span><a href="tel:+996707366749">+996(707)36-67-49</a></span><br>
+                                    <span><i class="fa fa-mobile-retro"></i><span> Мобильный: </span><a href="tel:+996707366749">+996(707)36-67-49</a></span><br>
+                                    <span><i class="fa fa-envelope-circle-check"></i><span> Email: </span><a href="mailto:bavariamed@gmail.com">bavariamed@gmail.com</a></span><br>
+                                </p>
+                            </div>
+                            <a href="" class="btn btn-primary py-3 px-4 me-2"><i class="fa fa-phone-alt me-2"></i>Сделать Звонок</a>
+                            <a href="" class="btn btn-dark py-3 px-4"><i class="fa fa-calendar-alt me-2"></i>Оформить заявку</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Call to Action End -->
+
+
+<!-- Testimonial Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h1 class="mb-3">Отзывы</h1>
+        </div>
+        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+            <div class="testimonial-item bg-light rounded p-3">
+                <div class="bg-white border rounded p-4">
+                    <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet
+                        diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
+                    <div class="d-flex align-items-center">
+                        <img class="img-fluid flex-shrink-0 rounded" src="img/call-to-action.jpg"
+                                style="width: 45px; height: 45px;">
+                        <div class="ps-3">
+                            <h6 class="fw-bold mb-1">Client Name</h6>
+                            <small>Profession</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item bg-light rounded p-3">
+                <div class="bg-white border rounded p-4">
+                    <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet
+                        diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
+                    <div class="d-flex align-items-center">
+                        <img class="img-fluid flex-shrink-0 rounded" src="img/call-to-action.jpg"
+                                style="width: 45px; height: 45px;">
+                        <div class="ps-3">
+                            <h6 class="fw-bold mb-1">Client Name</h6>
+                            <small>Profession</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item bg-light rounded p-3">
+                <div class="bg-white border rounded p-4">
+                    <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet
+                        diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
+                    <div class="d-flex align-items-center">
+                        <img class="img-fluid flex-shrink-0 rounded" src="img/call-to-action.jpg"
+                                style="width: 45px; height: 45px;">
+                        <div class="ps-3">
+                            <h6 class="fw-bold mb-1">Client Name</h6>
+                            <small>Profession</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
+
+{% endblock content %}

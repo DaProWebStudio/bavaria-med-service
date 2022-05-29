@@ -1,0 +1,30 @@
+
+/* Media Teble  */
+@media (max-width: 991px) and (min-width: 576px) {
+    .mega-banner div {
+        border-left: none;
+        border-top: 2px solid rgba(255, 255, 255, 0.514);
+        padding-top: 20px;
+    }
+    .mega-banner div:first-child {
+        border-top: none;
+        padding-top: 0;
+    }
+    .mega-banner div:nth-child(2) {
+        border-top: none;
+        padding-top: 0;
+    }
+}
+
+/* Media Mobile  */
+@media (max-width: 575px) {
+    .mega-banner div {
+        border-left: none;
+        border-top: 2px solid rgba(255, 255, 255, 0.514);
+        padding-top: 20px;
+    }
+    .mega-banner div:first-child {
+        border-top: none;
+        padding-top: 0;
+    }
+}
