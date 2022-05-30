@@ -25,33 +25,12 @@
 </div>
 <!-- Header End -->
 
-<!-- Search Start -->
-<div class="container-fluid bg-primary mb-5 py-4 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container">
-        <div class="row g-2 mega-banner">
-            <div class="col-lg-3 col-md-6 col-12">
-                <h4><a href="#">Роды и педиатрия</a></h4>
-                <p>Разные аспекты проведения родов и лечения детей в Германии.</p>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <h4><a href="#">Онкологические заболевания</a></h4>
-                <p>Германия — одна из самых успешных стран на фронте войны с раком.</p>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <h4><a href="#">Кардиология</a></h4>
-                <p>Сложные операции на сердце под силу опытным врачам из Германии.</p>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <h4><a href="#">Урология и лечение простаты</a></h4>
-                <p>Подробности о лечении мужского здоровья в Германии.</p>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Search End -->
+<!-- Mega carousel Start -->
+{% include 'include/mega-carousel.html' %}
+<!-- Mega carousel End -->
 
 
-<!-- About Start -->
+<!-- diagnostics Start -->
 <div class="container-xxl py-5 diagnostics">
     <div class="container">
         <div class="row g-5 align-items-center">
@@ -61,24 +40,21 @@
                 </div>
             </div>
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                <h2 class="mb-4">Программы по диагностике все включено</h2>
-                <p class="mb-4">
-                    Эффективное лечение в Европе невозможно без качественной диагностики. Поэтому, прежде чем планировать лечение в Германии, 
-                    необходимо приложить выяснение природы заболевания. Диагностика в Германии включает широкие лабораторные исследования, 
-                    магнитно-резонансную томографию внутренних органов, ультразвуковое исследование и ряд других тестов.
-                </p>
+                <h2 class="mb-4">Уважаемые Дамы и Господа </h2>
+                <p>Мы рады Вас приветствовать на нашем сайте, какой занимается организацией лечения в Мюнхене.</p>
                 <p>
-                    Фирма БаварияМед предлагает прохождениеи полной и лучших немецких клиниках. Срок всех диагностических процедур от одного дня до одной недели.
-                     В немецких клиниках вам будет обеспечен профессиональный подход. Вы сможете совместить диагностическую программу с деловой поездкой, 
-                     если у вас и вашей компании есть какие-либо интересы в Германии.
+                    Очень часто вы не можете получить точный  диагноз или хотите услышать второе мнение специалистов из Германии. 
+                    Вы не уверены в правильности тактики лечения и просто хотите пройти диагностику в лучших  немецких клиниках.
                 </p>
+                <p>Мы предлагаем  вам уникальную возможность в короткий срок получить мнение специалистов из  ведущих Мюнхенских клиник.</p>
+                <p>Для этого вам нужно только заполнить заявку или обратиться в наш сервисный центр (указать телефон и почтовый адрес)</p>
                 
-                <a class="btn btn-primary py-3 px-5 mt-3" href="">Подробнее</a>
+                <a class="btn btn-primary py-3 px-5 mt-3" href="{% url 'greeting' %}">Подробнее</a>
             </div>
         </div>
     </div>
 </div>
-<!-- About End -->
+<!-- diagnostics End -->
 
 <!-- Property List Start -->
 <div class="container-xxl py-5">
@@ -254,35 +230,9 @@
 </div>
 <!-- Team End -->
 
-
-    <!-- Call to Action Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="bg-dark rounded p-3">
-                <div class="bg-white rounded p-4" style="border: 1px dashed rgba(0, 185, 142, .3)">
-                    <div class="row g-5 align-items-center">
-                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                            <img class="img-fluid rounded w-100" src="{% static 'images/call-to-action.jpg' %}" alt="">
-                        </div>
-                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                            <div class="mb-4">
-                                <h1 class="mb-3">Наши контакты</h1>
-                                <p style="line-height: 2.5;">
-                                    <span><i class="fa fa-phone"></i><span> Телефон: </span><a href="tel:+996707366749">+996(707)36-67-49</a></span><br>
-                                    <span><i class="fa fa-mobile-retro"></i><span> Мобильный: </span><a href="tel:+996707366749">+996(707)36-67-49</a></span><br>
-                                    <span><i class="fa fa-envelope-circle-check"></i><span> Email: </span><a href="mailto:bavariamed@gmail.com">bavariamed@gmail.com</a></span><br>
-                                </p>
-                            </div>
-                            <a href="" class="btn btn-primary py-3 px-4 me-2"><i class="fa fa-phone-alt me-2"></i>Сделать Звонок</a>
-                            <a href="" class="btn btn-dark py-3 px-4"><i class="fa fa-calendar-alt me-2"></i>Оформить заявку</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Call to Action End -->
-
+<!-- Call to Action Start -->
+{% include 'include/contact-block.html' %}
+<!-- Call to Action End -->
 
 <!-- Testimonial Start -->
 <div class="container-xxl py-5">
