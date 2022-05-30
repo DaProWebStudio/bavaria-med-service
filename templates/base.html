@@ -69,9 +69,9 @@
             <div class="navbar-collapse">
                 <div class="margin-position"></div>
                 <div class="navbar-nav ms-auto">
-                    <li class="nav-list"><a href="index.html" class="nav-item nav-link active">Главная</a></li>
-                    <li class="nav-list"><a href="about.html" class="nav-item nav-link">Диагностика </a></li>
-                    <li class="nav-list"><a href="about.html" class="nav-item nav-link">Медицинские услуги</a></li>
+                    <li class="nav-list"><a href="{% url 'index' %}" class="nav-item nav-link active">Главная</a></li>
+                    <li class="nav-list"><a href="{% url 'diagnostics' %}" class="nav-item nav-link">Диагностика</a></li>
+                    <li class="nav-list"><a href="{% url 'service' %}" class="nav-item nav-link">Медицинские услуги</a></li>
                     <li class="nav-list"><a href="about.html" class="nav-item nav-link">Наши клиники</a></li>
                     <li class="nav-list"><a href="about.html" class="nav-item nav-link">Вопросы и ответы</a></li>
                     <li class="nav-list"><a href="contact.html" class="nav-item nav-link">Контакты</a></li>
@@ -90,7 +90,7 @@
     {% endblock content %}
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid bg-dark text-white-50 footer mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
