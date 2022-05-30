@@ -610,7 +610,7 @@
     color: var(--light);
 }
 
-.diagnostics #price {
+.diagnostics #diagnostics__table {
     border-collapse: separate;
     border-spacing: 1px;
     border: 1px solid #DCDCDC;
@@ -623,4 +623,12 @@
 
 thead, tbody, tfoot, tr, td, th {
     border-width: 1px !important;
+}
+
+#diagnostics__table td {
+    font-size: 90%;
+    line-height: 139%;
+    padding: 1em 1em;
+    border: 1px solid #DCDCDC;
+    color: #0E2E50;
 }

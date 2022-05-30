@@ -85,6 +85,24 @@
             }
         }
     });
+
+    $(".mega-carousel").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1000,
+        margin: 24,
+        dots: false,
+        loop: true,
+        nav : true,
+        navText : false,
+        responsive: {
+            0:{
+                items:1
+            },
+            992:{
+                items:3
+            }
+        }
+    });
     
 })(jQuery);
 
