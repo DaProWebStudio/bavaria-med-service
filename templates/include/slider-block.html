@@ -1,0 +1,28 @@
+{% load static %}
+
+<div class="bg-light rounded p-3 mb-3">
+    <div class="bg-white border rounded p-3 text-center">
+        <a href="/contacts/#feedback">Оформить заявку на лечение</a>
+    </div>
+</div>
+<div class="bg-light rounded p-3 mb-3">
+    <div class="bg-white border rounded p-3 text-center">
+        <h6>Проконсультироваться со специалистом</h6>
+        <span class="my-3 d-block" style="color: #00B98E; font-size: 20px"><i class="fa fa-phone"></i> <a href="tel:{{ phone }}">+996(707)36-67-49</a></span>
+        <p style="font-size: 25px; color: #0E2E50" class="m-0">Работаем в 24/7</p>
+        <p>отвечаем на любые вопросы по организации лечения</p>
+    </div>
+</div>
+<div class="bg-light rounded p-3 mb-3">
+    <div class="bg-white border rounded p-3">
+        <h6>Стол информации</h6>
+        <ul>
+            <li><a href="#">С чего начать</a></li>
+            <li><a href="#">Мотивы и цены</a></li>
+            <li><a href="#">Выбор клиники</a></li>
+            <li><a href="#">Коротко о Германии</a></li>
+        </ul>
+        <h6>Визовая поддержка</h6>
+        <a href="{% static 'files/visa-for-germany-in-russia.pdf' %}" target="_blank"><i class="fa fa-file-pdf" style="margin-right: 5px"></i> <span>Анкета для получения визы в Германию</span></a>
+    </div>
+</div>
