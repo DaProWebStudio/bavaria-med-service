@@ -9,9 +9,9 @@ from imagekit.processors import ResizeToFill
 from core.services.translit import translit_slug
 
 
-def upload_to_news_img(instance, filename):
+def upload_to_img(instance, filename):
     list_file = filename.split('.')
-    return f'News/{instance.news.slug[0:35]}/{translit_slug(list_file[0])}.{list_file[-1]}/'
+    return f'services/{translit_slug(instance.title)}.{list_file[-1]}'
 
 
 class Service(models.Model):
