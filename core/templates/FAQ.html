@@ -1,0 +1,213 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="diagnostics p-3 pt-0">
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button aria-controls="collapseOne" aria-expanded="true" class="accordion-button" data-bs-target="#collapseOne" data-bs-toggle="collapse" type="button">
+                    Если я решил выехать в Германию на лечение. С чего мне надо начать?
+                </button>
+            </h2>
+            <div aria-labelledby="headingOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample" id="collapseOne">
+                <div class="accordion-body">
+                    В рубрике «контактная информация» есть форма анкеты-заявки, заполните её и отошлите нам со всеми необходимыми документами любым из доступных вам способов: 
+                    электронной почтой bavariamed@gmail.com или по факсу 00498933096397. Консультацию вы можете также получить по любому из перечисленных телефонов или по скайпу.
+                    Мы ответим на вашу заявку и скординируем ваши действия.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button aria-controls="collapseTwo" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseTwo" data-bs-toggle="collapse" type="button">
+                    Какой пакет документов нужен для выезда в Германию для прохождения лечения?
+                </button>
+            </h2>
+            <div aria-labelledby="headingTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseTwo">
+                <div class="accordion-body">
+                    Мы подготовим пакет документов, на основании которого вы получите шенгенскую визу. В рубрике «с чего начать» вы найдете ссылку на сайт 
+                    немецкого посольства, где представлен весь список необходимых документов.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button aria-controls="collapseThree" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseThree" data-bs-toggle="collapse" type="button">
+                    Сколько времени займёт оформление всех необходимых документов?
+                </button>
+            </h2>
+            <div aria-labelledby="headingThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseThree">
+                <div class="accordion-body">
+                    Для начала мы даем подтверждение от клиники о готовности приёма на лечение. Подготовка всей документации обычно занимает одну неделю. 
+                    Однако в экстренных случаях возможен оформление визы в срочном случае.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingR05">
+                <button aria-controls="collapseR05" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseR05" data-bs-toggle="collapse" type="button">
+                    В какой срок с момента первого обращения клиент может начать лечение?
+                </button>
+            </h2>
+            <div aria-labelledby="headingR05" class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseR05">
+                <div class="accordion-body">
+                    Если у вас есть Шенгенская виза, то приезд возможен через 24 часа.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingR06">
+                <button aria-controls="collapseR06" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseR06" data-bs-toggle="collapse" type="button">
+                    Каким образом решается проблема языкового барьера? Оказываете ли вы помощь в этом направлении?
+                </button>
+            </h2>
+            <div aria-labelledby="headingR06" class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseR06">
+                <div class="accordion-body">
+                    Непосредственно в аэропорту вас встретит наш представитель — переводчик, который будет сопровождать вас все время в немецких медицинских учреждениях. 
+                    Все вопросы по пребыванию и лечению будут решаться непосредственно при его тесном контакте.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingR07">
+                <button aria-controls="collapseR07" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseR07" data-bs-toggle="collapse" type="button">
+                    Оплачивается ли работа переводчика отдельно, и если да, то по каким тарифам?
+                </button>
+            </h2>
+            <div aria-labelledby="headingR07" class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseR07">
+                <div class="accordion-body">
+                    Переводчик работает с оплатой по факту, то есть его оплата зависит от времени, в течение которого он находился в вашем распоряжении.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingR08">
+                <button aria-controls="collapseR08" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseR08" data-bs-toggle="collapse" type="button">
+                    Какие расценки на лечение в Германии?
+                </button>
+            </h2>
+            <div aria-labelledby="headingR08" class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseR08">
+                <div class="accordion-body">
+                    <p>
+                        Стоимость зависит от многих факторов, учитываемых при лечении:
+                        <ul>
+                            <li>В зависимости от того, является ли это лечение амбулаторным или проводится в стационарном режиме</li>
+                            <li>Срок нахождения в клинике, а также условия размещения в палате. Стоимость зависит от размещения в одноместной либо двухместной палате.</li>
+                            <li>Применение интенсивной терапии, стоимость прописанных медикаментов.</li>
+                            <li>Оплата лечения зависит от квалификации врачей (заведующий отделением или доктор медицины и профессор).</li>
+                        </ul>
+                        Калькуляция ваших расходов по лечению зависит от следующих данных:
+                        <ul>
+                            <li>Точности поставленного диагноза, то есть учитывается стадия заболевания, результаты проведённых исследований, рентгеновские снимки и т. д.</li>
+                            <li>Деньги, потраченные на диагностику, облегчают врачам клиник работу в постановке диагноза, и тем самым дают возможность в выборе правильной тактики лечения.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingR09">
+                <button aria-controls="collapseR09" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseR09" data-bs-toggle="collapse" type="button">
+                    Есть ли возможность снизить стоимость поездки в Германию?
+                </button>
+            </h2>
+            <div aria-labelledby="headingR09" class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseR09">
+                <div class="accordion-body">
+                    При обращении к нам попросите подобрать экономичный вариант клиники. В клиниках стоимость услуг влияет на общую стоимость, 
+                    но не влияет на качество лечения. Цены в них зависят комфортабельности предоставляемых палат, количества диагностики. 
+                    Мы сможем подобрать вариант, который будет устраивать вас более всего.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingR10">
+                <button aria-controls="collapseR10" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseR10" data-bs-toggle="collapse" type="button">
+                    Со мной хотят поехать сопровождающие. Возможно ли это?
+                </button>
+            </h2>
+            <div aria-labelledby="headingR10" class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseR10">
+                <div class="accordion-body">
+                    Любой сопровождающий может приехать с вами на лечение. При необходимости оформления Шенгенской визы мы впишем его как сопровождающего 
+                    в приглашение от клиники. Для этого необходим только действующий загранпаспорт.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingR11">
+                <button aria-controls="collapseR11" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseR11" data-bs-toggle="collapse" type="button">
+                    Предусмотрены ли варианты, если время необходимое на лечение превышает срок открытой визы? Что делать в таком случае?
+                </button>
+            </h2>
+            <div aria-labelledby="headingR11" class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseR11">
+                <div class="accordion-body">
+                    Для продления визы нам необходимо лишь наличие вашей фотографии и ваша подпись. Наш сотрудник, без вашего присутствия продлит визу в отделе по делам иностранцев МИДа Германии.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingR12">
+                <button aria-controls="collapseR12" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseR12" data-bs-toggle="collapse" type="button">
+                    В случае долгого лечения, нам не хотелось бы жить в гостинице. Какие варианты вы предлогаете.
+                </button>
+            </h2>
+            <div aria-labelledby="headingR12" class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseR12">
+                <div class="accordion-body">
+                    По вашему выбору мы можем подобрать жильё исходя из ваших потребностей. На ваш выбор большое разнообразие квартир и частных домов со всеми удобствами. 
+                    Стоимость проживания в них ниже, чем в гостинице.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingR13">
+                <button aria-controls="collapseR" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseR13" data-bs-toggle="collapse" type="button">
+                    Сколько времени занимает диагностика?
+                </button>
+            </h2>
+            <div aria-labelledby="headingR13" class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseR13">
+                <div class="accordion-body">
+                    Если говорить о консультации, то не больше одного дня. Пройти полное медицинское обследование (Check up), необходимо от 1 до 3 дней, в зависимости от объема диагностической программы. Оперативное стационарное вмешательство занимает от трех до семи дней. Многое зависит от уровня сложности операции и лечения.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingR14">
+                <button aria-controls="collapseR14" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseR14" data-bs-toggle="collapse" type="button">
+                    После окончания лечения, получу ли я выписку?
+                </button>
+            </h2>
+            <div aria-labelledby="headingR14" class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseR14">
+                <div class="accordion-body">
+                    После всей диагностики или лечения вы получаете выписку на немецком языке. В выписке указывают диагноз, методы и способ лечения, а также дают дальнейшие рекомендации по реабилитации и дальнейшем контроле.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingR15">
+                <button aria-controls="collapseR15" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseR15" data-bs-toggle="collapse" type="button">
+                    Могу ли я проводить консультации с профессорами удалённо, исключив мой личный приезд в Германию?
+                </button>
+            </h2>
+            <div aria-labelledby="headingR15" class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseR15">
+                <div class="accordion-body">
+                    Для этого вам необходимо переслать медицинское выписки и при необходимости рентгеновские снимки. Сотрудники компании проведут консультацию и предоставят всю полученную информацию.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingR16">
+                <button aria-controls="collapseR16" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseR16" data-bs-toggle="collapse" type="button">
+                    Я хочу приехать в Германию на реабилитационное лечение, как это проходит?
+                </button>
+            </h2>
+            <div aria-labelledby="headingR16" class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseR16">
+                <div class="accordion-body">
+                    Наша фирма подберет реабилитационный центр по вашему профилю заболевания. В клиниках есть различные программы по восстановлению здоровья. Центры находятся в курортных местах, часто располагаются на озерах или в предгорьях Альп.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

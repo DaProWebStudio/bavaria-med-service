@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.sitemaps',
     'django_cleanup',
+    'ckeditor',
     'imagekit',
     'fontawesomefree',
     

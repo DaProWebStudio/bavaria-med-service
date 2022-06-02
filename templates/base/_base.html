@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <!-- Primary Meta Tags -->
-    <title>Лечение в Германии, обследование и диагностика в клиниках Германии. Цены, информация.</title>
+    <title>{{ title }} | «Bavaria Med Service»</title>
     <meta name="title" content="Лечение в Германии, обследование и диагностика в клиниках Германии. Цены, информация.">
     <meta name="description" content="«Bavaria Med Service» — это сообщество практикующих в Германии врачей и медицинских менеджеров. Мы объединили специалистов современной медицины, чтобы организовать для вас эффективное лечение и врачебную помощь в лучших немецких клиниках. Мы поможем вам решить самые сложные проблемы лечения благодаря современной аппаратуре лучших немецких клиник.">
     <meta content="лечение в Германии, медицинский туризм, лечение в европе, немецкая клиника, роды в германии, диагностика в германии, лечение детей в германии, обследование в германии, реабилитация в германии" name="keywords">
@@ -72,9 +72,9 @@
                     <li class="nav-list"><a href="{% url 'index' %}" class="nav-item nav-link active">Главная</a></li>
                     <li class="nav-list"><a href="{% url 'diagnostics' %}" class="nav-item nav-link">Диагностика</a></li>
                     <li class="nav-list"><a href="{% url 'service' %}" class="nav-item nav-link">Медицинские услуги</a></li>
-                    <li class="nav-list"><a href="about.html" class="nav-item nav-link">Наши клиники</a></li>
-                    <li class="nav-list"><a href="about.html" class="nav-item nav-link">Вопросы и ответы</a></li>
-                    <li class="nav-list"><a href="contact.html" class="nav-item nav-link">Контакты</a></li>
+                    <li class="nav-list"><a href="{% url 'clinics' %}" class="nav-item nav-link">Наши клиники</a></li>
+                    <li class="nav-list"><a href="{% url 'faq' %}" class="nav-item nav-link">Вопросы и ответы</a></li>
+                    <li class="nav-list"><a href="{% url 'contact' %}" class="nav-item nav-link">Контакты</a></li>
                 </div>
             </div>
             <div class="burger">
@@ -86,8 +86,7 @@
     </div>
     <!-- Navbar End -->
 
-    {% block content %}
-    {% endblock content %}
+    {% block body %}{% endblock body %}
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white-50 footer mt-5 wow fadeIn" data-wow-delay="0.1s">

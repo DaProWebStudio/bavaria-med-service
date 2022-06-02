@@ -8,6 +8,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls')),
     path('service/', include('service.urls')),
+    path('clinics/', include('clinic.urls')),
 ]
 
 if settings.DEBUG:

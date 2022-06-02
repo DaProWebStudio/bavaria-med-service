@@ -1,10 +1,8 @@
+from django.shortcuts import render
 from django.views.generic import View, TemplateView
 
 
-class InfoMixin:
+class ViewMixin(View):
     
-    @staticmethod
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["phone"] = '996707366749'
-        return context
+    def get(self, *args, **kwargs):
+        return render(self.request, self.template_name, {'title': self.title, 'description': self.description})
