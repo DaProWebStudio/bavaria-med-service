@@ -5,4 +5,8 @@ from django.views.generic import View, TemplateView
 class ViewMixin(View):
     
     def get(self, *args, **kwargs):
-        return render(self.request, self.template_name, {'title': self.title, 'description': self.description})
+        context = {
+            'title': self.title, 
+            'description': self.description
+        }
+        return render(self.request, self.template_name, context)
