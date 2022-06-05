@@ -1,31 +1,57 @@
-{% extends 'base/_base.html' %}
-{% load static %}
-
-{% block body %}
- <!-- Header Start -->
- <div class="container-fluid header bg-white p-0">
-    <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
-        <div class="col-12 p-5 mt-xl-8">
-            <h1 class="display-5 animated fadeIn mb-4">{{ title }}</h1> 
+<!DOCTYPE html>
+<html lang="ru">
+{% load static i18n %}
+<head>
+    {% include 'base/head/meta.html' %}
+    {% include 'base/head/link.html' %}
+</head>
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+            </div>
         </div>
+        <!-- Spinner End -->
+        {% include 'base/navbar.html' %}
+
+        {% block content %}
+            <!-- Header Start -->
+            <div class="container-fluid header bg-white p-0">
+                <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+                    <div class="col-12 p-5 mt-xl-8">
+                        <h1 class="display-5 animated fadeIn mb-4">{{ title }}</h1> 
+                    </div>
+                </div>
+            </div>
+            <!-- Header End -->
+
+            <!-- Mega carousel Start -->
+            {% include 'include/mega-carousel.html' %}
+            <!-- Mega carousel End -->
+
+            <div class="container-xxl m-auto row">
+                <div class="col-lg-9 col-12">
+                    {% block content-xxl %}{% endblock content-xxl %}
+                </div>
+
+                <div class="col-lg-3 col-12 sidebar_box">
+                    {% include 'include/slider-block.html' %}
+                </div>
+                
+                {% block contact %}{% include 'include/contact-block.html' %}{% endblock contact %}
+            </div>
+        {% endblock content %}
+
+        {% include 'base/footer.html' %}
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
-</div>
-<!-- Header End -->
 
-<!-- Mega carousel Start -->
-{% include 'include/mega-carousel.html' %}
-<!-- Mega carousel End -->
+    {% include 'base/script.html' %}
 
-<div class="container-xxl m-auto row">
-    <div class="col-lg-9 col-12">
-        {% block content %}{% endblock content %}
-    </div>
+</body>
 
-    <div class="col-lg-3 col-12 sidebar_box">
-        {% include 'include/slider-block.html' %}
-    </div>
-
-    {% include 'include/contact-block.html' %}
-</div>
-
-{% endblock body %}
+</html>
