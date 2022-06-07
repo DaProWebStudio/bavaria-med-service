@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//RU">
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        html, body, table {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .container {
+            border-radius: 10px;
+            background-color: rgba(0,0,0,.2);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            color: #ffffff;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                width: 50%;
+                margin: 50px 0;
+                padding: 10px;
+            }
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                margin: 30px 0;
+                padding: 10px;
+            }
+        }
+        .logo {
+            margin: 0;
+            padding: 7px 0 0 0;
+            height: 80px;
+            width: 100%;
+        }
+        .logo img {
+            width: 70px;
+        }
+
+        .content h1 {
+            text-align: center;
+            font-size: 22px;
+        }
+
+        .p {
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <table background="https://btk.kg/static/images/edo_btk/1-2.jpg">
+        <tbody>
+            <tr>
+                <td>
+                    <center>
+                        <table class="container" >
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="logo">
+                                            <img src="https://btk.kg/static/images/edo_btk/EDOBTK.svg" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <h1>Уважаемый(-ая) {{ full_name }}!</h1>
+
+                                            {% for i in body %}
+                                                <p style="text-align: justify">{{ i|safe }}</p>
+                                            {% endfor %}
+
+                                            <hr color="#fff">
+                                            <p class="p" style="text-align: justify">C уважением, Администрация сайта <a href="http://edo.btk.kg/">edo.btk.kg</a>.</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </center>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
