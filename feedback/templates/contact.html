@@ -1,0 +1,118 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content-xxl %}
+<div class="container">
+    <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+        <h1 class="mb-3">{{ title }}</h1>
+        <p>{{ description }}</p>
+    </div>
+    <div class="row g-4">
+        <div class="col-12" id="info-contact">
+            <div class="row gy-4">
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3" style="border: 1px dashed rgba(0, 185, 142, .3)">
+                            <div class="icon me-3" style="width: 45px; height: 45px;">
+                                <i class="fa fa-envelope-open text-primary"></i>
+                            </div>
+                            <span><a href="mailto:{{ email }}">{{ email }}</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3" style="border: 1px dashed rgba(0, 185, 142, .3)">
+                            <div class="icon me-3" style="width: 45px; height: 45px;">
+                                <i class="fa fa-mobile-retro text-primary"></i>
+                            </div>
+                            <span><a href="mailto:{{ mobile_number.href }}">{{ mobile_number.format }}</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3" style="border: 1px dashed rgba(0, 185, 142, .3)">
+                            <div class="icon me-3" style="width: 45px; height: 45px;">
+                                <i class="fa fa-phone-alt text-primary"></i>
+                            </div>
+                            <span><a href="mailto:{{ tel_number.href }}">{{ tel_number.format }}</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="wow fadeInUp" data-wow-delay="0.5s">
+                <h5 class="h5 mb-3">Оформление заявки</h5>
+                <p>
+                    Тут должен быть информация про заявление и т.п.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-6" id="statement">
+            <div class="wow fadeInUp" data-wow-delay="0.5s">
+                <h5 class="h5 mb-3">Оформление заявки</h5>
+                <form method="post">{% csrf_token %}
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                {{ form.full_name }}
+                                {{ form.full_name.label_tag }}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                {{ form.email }}
+                                {{ form.email.label_tag }}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                {{ form.phone }}
+                                {{ form.phone.label_tag }}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                {{ form.region }}
+                                {{ form.region.label_tag }}
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                {{ form.message }}
+                                {{ form.message.label_tag }}
+                            </div>
+                        </div>
+                        <div class="col-12 i_agree">
+                            <input class="form-check-input form-control" id="flexCheckDefault" type="checkbox" required="required">
+                            <label for="flexCheckDefault" class="form-check-label checkbox_label">Согласен на обработку персональных данных</label>
+                        </div>
+                        <div class="col-12 recaptcha row mt-md-3">
+                            <div class="col-lg-8 col-12">
+                                <img src="{{ recaptcha.image.url }}" alt="">
+                                <input type="hidden" name="answer_recaptcha" value="{{ recaptcha.answer }}">
+                            </div>
+                            <div class="col-lg-4 col-12">
+                                <div class="form-floating">
+                                    <input type="number" name="answer_user" class="form-control {% if errors %}is-invalid{% endif %}" id="answer" placeholder="answer recaptcha" required="required">
+                                    <label for="answer">Напишите ответ</label>
+                                </div>
+                            </div>
+                            {% if errors %}
+                                <p style="color: red">Неправильный ответ</p>
+                            {% endif %}
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary w-100 py-3" type="submit">Отправить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content-xxl %}
+
+{% block contact %}{% endblock contact %}
