@@ -100,9 +100,7 @@
                                     <label for="answer">Напишите ответ</label>
                                 </div>
                             </div>
-                            {% if errors %}
-                                <p style="color: red">Неправильный ответ</p>
-                            {% endif %}
+                            {% if errors %}<p style="color: red">Неправильный ответ</p>{% endif %}
                         </div>
                         <div class="col-12">
                             <button class="btn btn-primary w-100 py-3" type="submit">Отправить</button>
