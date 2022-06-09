@@ -11,6 +11,15 @@
     };
     spinner();
     
+    $(document).ready(function () {
+        $('.navbar-nav a').each(function(){
+            let location = window.location.protocol + '//' + window.location.host + window.location.pathname;
+            let link = this.href;
+            if(location == link){
+                $(this).parent().addClass('active');
+            }
+        });
+    });
     
     // Initiate the wowjs
     new WOW().init();
@@ -30,7 +39,6 @@
         $('.burger').click(function() {
             $(this).toggleClass('burger_active');
             $('.navbar-collapse').toggleClass('navbar-collapse-active')
-            $('.margin-position').toggleClass('margin-position-active').html('<h1 class="logo-text mb-0 text-primary">edu<span class="logo-hunter">hunter</span></h1>')
         });
     })
     
@@ -98,8 +106,29 @@
             0:{
                 items:1
             },
+            768:{
+                items:2
+            },
             992:{
                 items:3
+            }
+        }
+    });
+
+    $(".doctor-carousel").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1000,
+        margin: 24,
+        dots: false,
+        loop: true,
+        nav : true,
+        navText : false,
+        responsive: {
+            0:{
+                items:1
+            },
+            992:{
+                items:4
             }
         }
     });

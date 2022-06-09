@@ -10,7 +10,7 @@
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
+                <span class="sr-only">Loading...</span>
             </div>
         </div>
         <!-- Spinner End -->
@@ -18,12 +18,8 @@
 
         {% block content %}
             <!-- Header Start -->
-            <div class="container-fluid header bg-white p-0">
-                <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
-                    <div class="col-12 p-5 mt-xl-8">
-                        <h1 class="display-5 animated fadeIn mb-4">{{ title }}</h1> 
-                    </div>
-                </div>
+            <div class="banner bg-white p-0">
+                <img src="{% static 'images/main/intro/index.jpg' %}" alt="">
             </div>
             <!-- Header End -->
 
@@ -31,17 +27,20 @@
             {% include 'include/mega-carousel.html' %}
             <!-- Mega carousel End -->
 
-            <div class="container-xxl m-auto row">
-                <div class="col-lg-9 col-12">
-                    {% block content-xxl %}{% endblock content-xxl %}
-                </div>
+            <section class="content-xxl">
+                <div class="container-xxl content-xxl m-auto row">
+                    <div class="col-lg-9 col-12">
+                        {% block content-xxl %}{% endblock content-xxl %}
+                    </div>
 
-                <div class="col-lg-3 col-12 sidebar_box">
-                    {% include 'include/slider-block.html' %}
+                    <div class="col-lg-3 col-12 sidebar_box">
+                        {% include 'include/slider-block.html' %}
+                    </div>
                 </div>
-                
-                {% block contact %}{% include 'include/contact-block.html' %}{% endblock contact %}
-            </div>
+            </section> 
+
+            {% block contact %}{% include 'include/contact-block.html' %}{% endblock contact %}
+
         {% endblock content %}
 
         {% include 'base/footer.html' %}
@@ -53,5 +52,4 @@
     {% include 'base/script.html' %}
 
 </body>
-
 </html>

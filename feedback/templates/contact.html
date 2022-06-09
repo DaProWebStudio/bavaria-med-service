@@ -42,7 +42,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
             <div class="wow fadeInUp" data-wow-delay="0.5s">
                 <h5 class="h5 mb-3">Оформление заявки</h5>
                 <p>
@@ -50,7 +50,7 @@
                 </p>
             </div>
         </div>
-        <div class="col-md-6" id="statement">
+        <div class="col-md-8" id="statement">
             <div class="wow fadeInUp" data-wow-delay="0.5s">
                 <h5 class="h5 mb-3">Оформление заявки</h5>
                 <form method="post">{% csrf_token %}
@@ -90,11 +90,11 @@
                             <label for="flexCheckDefault" class="form-check-label checkbox_label">Согласен на обработку персональных данных</label>
                         </div>
                         <div class="col-12 recaptcha row mt-md-3">
-                            <div class="col-lg-8 col-12">
-                                <img src="{{ recaptcha.image.url }}" alt="">
+                            <div class="col-lg-6 col-12">
+                                <img src="{{ recaptcha.image.url }}" alt="" width="100%">
                                 <input type="hidden" name="answer_recaptcha" value="{{ recaptcha.answer }}">
                             </div>
-                            <div class="col-lg-4 col-12">
+                            <div class="col-lg-6 col-12">
                                 <div class="form-floating">
                                     <input type="number" name="answer_user" class="form-control {% if errors %}is-invalid{% endif %}" id="answer" placeholder="answer recaptcha" required="required">
                                     <label for="answer">Напишите ответ</label>

@@ -1,7 +1,6 @@
 from random import randint
 
-from django.shortcuts import render, redirect
-from django.views.generic import View, FormView
+from django.views.generic import FormView
 
 from .models import Recaptcha
 from .forms import CreateStatementForm

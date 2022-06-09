@@ -1,19 +1,23 @@
 from django.shortcuts import render
 from django.views.generic import View, TemplateView
 
+from clinic.models import Clinic
+from core.models import Doctor
+
 from .mixins import ViewMixin
 from . import pages_info as info
+
 
 class IndexView(ViewMixin):
     title = info.index_title
     description = info.index_description
     template_name = 'index.html'
     
-    
-class GreetingView(ViewMixin):
-    title = info.greeting_title
-    description = info.greeting_description
-    template_name = 'greeting.html'
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["clinics"] = Clinic.objects.all()[:6]
+        context["doctors"] = Doctor.objects.all()
+        return context
     
     
 class FAQView(ViewMixin):

@@ -1,72 +1,59 @@
 {% extends 'base/base.html' %}
-{% load static %}
+{% load static imagekit %}
 
-{% block content %}
-<!-- Header Start -->
-<div class="container-fluid header bg-white p-0">
-    <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
-        <div class="col-md-6 p-3 p-lg-5 mt-lg-5">
-            <h1 class="display-5 animated fadeIn mb-4">
-                Лечение в <span class="text-primary">Германии</span></h1>
-            <p class="animated fadeIn mb-4 pb-2">«Bavaria Med Service» — это сообщество практикующих в Германии врачей и медицинских менеджеров. Мы объединили специалистов современной медицины, чтобы организовать для вас эффективное лечение и врачебную помощь в лучших немецких клиниках. Мы поможем вам решить самые сложные проблемы лечения благодаря современной аппаратуре лучших немецких клиник.</p>
-            <a href="" class="btn btn-primary py-3 px-4 me-3 animated fadeIn">Оформить заявку на лечение</a>
-        </div>
-        <div class="col-md-6 animated fadeIn">
-            <div class="owl-carousel header-carousel">
-                <div class="owl-carousel-item">
-                    <img class="img-fluid" src="{% static 'images/main/clinics/carousel-1.jpg' %}" alt="">
-                </div>
-                <div class="owl-carousel-item">
-                    <img class="img-fluid" src="{% static 'images/main/clinics/carousel-2.png' %}" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Header End -->
-
-<!-- Mega carousel Start -->
-{% include 'include/mega-carousel.html' %}
-<!-- Mega carousel End -->
-
+{% block content-xxl %}
 <!-- diagnostics Start -->
-<div class="container-xxl py-5 diagnostics">
+<div class="container-xxl diagnostics">
     <div class="container">
-        <div class="row g-5 align-items-center">
-            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                <div class="about-img position-relative overflow-hidden p-5 pe-0">
-                    <img class="img-fluid w-100" src="{% static 'images/main/luchevaya-diagnostika-657575.jpg' %}">
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                <h2 class="mb-4">Уважаемые Дамы и Господа </h2>
-                <p>Мы рады Вас приветствовать на нашем сайте, какой занимается организацией лечения в Мюнхене.</p>
-                <p>
-                    Очень часто вы не можете получить точный  диагноз или хотите услышать второе мнение специалистов из Германии. 
-                    Вы не уверены в правильности тактики лечения и просто хотите пройти диагностику в лучших  немецких клиниках.
-                </p>
-                <p>Мы предлагаем  вам уникальную возможность в короткий срок получить мнение специалистов из  ведущих Мюнхенских клиник.</p>
-                <p>Для этого вам нужно только заполнить заявку или обратиться в наш сервисный центр (указать телефон и почтовый адрес)</p>
-                
-                <a class="btn btn-primary py-3 px-5 mt-3" href="{% url 'greeting' %}">Подробнее</a>
-            </div>
+        <div class="wow fadeIn" data-wow-delay="0.5s">
+            <h2 class="mb-4 text-center">Уважаемые Дамы и Господа </h2>
+            <p style="text-align: justify; text-indent: 45px;">
+                Мы рады Вас приветствовать на нашем сайте, какой занимается организацией лечения в Мюнхене.
+            </p>
+            <p style="text-align: justify; text-indent: 45px;">
+                Очень часто вы не можете получить точный  диагноз или хотите услышать второе мнение специалистов из Германии. 
+                Вы не уверены в правильности тактики лечения и просто хотите пройти диагностику в лучших  немецких клиниках.
+            </p>
+            <p style="text-align: justify;">
+                Мы предлагаем  вам уникальную возможность в короткий срок получить мнение специалистов из  ведущих Мюнхенских клиник.
+            </p>
+            <p style="text-align: justify;">
+                Для этого вам нужно только заполнить заявку или обратиться в наш <a href="#contact-info">сервисный центр</a> 
+                (указать телефон и почтовый адрес )
+            </p>
+            <p style="text-align: justify;">
+                По предоставленным выпискам ,анализам крови и снимкам, какие мы незамедлительно оправляем в Германию вы получаете ответ 
+                в короткое время по диагнозу и тактике лечения.
+            </p>
+            <p style="text-align: justify;">
+                Самое важное, что у нас есть, это здоровье. Мы часто теряем драгоценное времени на очереди к врачам и сомнительные диагнозы. 
+                У нас вы получите современное лечение мировых стандартов. Лучшие специалисты в области кардиологии, ортопедии, хирургии, ЛОР, 
+                офтольмологии, урологии, нейрохирургии, онкологии могут помочь вам. Стоимость услуг зависит от предоставленных выписок и 
+                сложности диагноза.
+            </p>
+            <p style="text-align: justify;">
+                При необходимости оперативного вмешательства ,мы организуем визовую поддержку для пациента и сопровождающего лица. 
+                Организуем встречу в аэропорту и полностью координируем ваше прибывание в Германии. Организовываем встречи с врачами и 
+                предоставляем услуги переводчика.Вы не будете чувствовать языкового барьера.
+            </p>
+            <p style="text-align: justify;">
+                Все услуги носят индивидуальный характер. Свяжитесь прямо сейчас с нашим сервисным центром (телефон и ел. Адрес) 
+                и вы получите полную информацию по организации лечения и диагностики в Германии.
+            </p>
+            <p class="text-center"><b>Мы заботимся о вас и вашем здоровье.</b></p>
         </div>
     </div>
 </div>
 <!-- diagnostics End -->
 
 <!-- Property List Start -->
-<div class="container-xxl py-5">
+<div class="container-xxl py-4">
     <div class="container">
-        <div class="row g-0 gx-5 align-items-end">
-            <div class="col-12">
-                <div class="text-start mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <h1 class="mb-3">Наши клиники</h1>
-                    <p>Все клиники в Германии, с которыми мы сотрудничаем — это учреждения высочайшего уровня, оборудованные по последнему слову техники, в которых работают самые высококвалифицированные специалисты не только из Германии, но и из многих стран мира.</p>
-                </div>
+            <div class="text-start mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <h3 class="mb-3 text-center">Программы по диагностике все включено</h3>
+                <p>Все клиники в Германии, с которыми мы сотрудничаем — это учреждения высочайшего уровня, оборудованные по последнему слову техники, в которых работают самые высококвалифицированные специалисты не только из Германии, но и из многих стран мира.</p>
             </div>
             
-        </div>
         <div class="tab-content">
             <div id="university" class="tab-pane fade show p-0 active">
                 <div class="row g-4">
@@ -154,10 +141,6 @@
 </div>
 <!-- Team End -->
 
-<!-- Call to Action Start -->
-{% include 'include/contact-block.html' %}
-<!-- Call to Action End -->
-
 <!-- Testimonial Start -->
 <div class="container-xxl py-5">
     <div class="container">
@@ -212,4 +195,4 @@
 </div>
 <!-- Testimonial End -->
 
-{% endblock content %}
+{% endblock content-xxl %}

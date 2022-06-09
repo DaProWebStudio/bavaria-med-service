@@ -19,6 +19,7 @@ DEBUG = eval(env('DEBUG'))
 
 ALLOWED_HOSTS = env('ALLOWED_HOSTS').split(' ')
 
+SITE_ID = 1
 
 # Application definition
 INSTALLED_APPS = [
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'core.apps.CoreConfig',
     'service.apps.ServiceConfig',
     'clinic.apps.ClinicConfig',
+    'feedback.apps.FeedbackConfig',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +58,7 @@ ROOT_URLCONF = 'bavaria.urls'
 if DEBUG:
     INSTALLED_APPS.append('debug_toolbar')
     MIDDLEWARE.append('debug_toolbar.middleware.DebugToolbarMiddleware')
-    INTERNAL_IPS = ['192.168.8.103', '127.0.0.1']
+    INTERNAL_IPS = ['192.168.2.102', '127.0.0.1']
 
 TEMPLATES = [
     {
@@ -69,6 +71,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'core.services.context_processors.getting_info',
             ],
         },
     },

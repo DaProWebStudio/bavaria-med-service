@@ -1,14 +1,34 @@
 {% load static %}
 
+<div class="company px-5 pt-3">
+    <div class="logo">
+        <a href="{% url 'index' %}" class="logotype">
+            <img src="{% static 'images/logo/logo.svg' %}" alt="Bavaria Med Service" width="185">
+        </a>
+    </div>
+    <div class="info_company">
+        <div class="text-center d-grid align-center">
+            <h1><a href="#"> Лечение в Германии </a></h1>
+        </div>
+    </div>
+    <div class="contacts-block">
+        <div class="contacts">
+            <p class="m-0 tel_number"><i class="fa fa-phone"></i> <a href="tel:{{ tel_number.href }}">{{ tel_number.format }}</a></p>
+            <p class="m-0 mobile_number"><i class="fa fa-mobile-retro ml-2"></i>  <a href="tel:{{ mobile_number.href }}">{{ mobile_number.format }}</a></p>
+            <p class="m-0 email"><i class="fa fa-envelope-open"></i> <a href="mailto:{{ email }}">{{ email }}</a></p>
+        </div>
+    </div>
+</div>
+
 <!-- Navbar Start -->
-<div class="container-fluid nav-bar bg-transparent">
-    <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
-        <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
-            <img src="{% static 'images/logo/logo.svg' %}" alt="logo" width="165">
+<div class="container-fluid nav-bar bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light py-0 px-4">
+        <a href="index.html" class="navbar-brand d-flex align-items-center text-center d-none">
+            <img src="{% static 'images/logo/logo.svg' %}" alt="Bavaria Med Service" width="165">
         </a>
         <div class="navbar-collapse">
             <div class="margin-position"></div>
-            <div class="navbar-nav ms-auto">
+            <div class="navbar-nav m-auto">
                 <li class="nav-list"><a href="{% url 'index' %}" class="nav-item nav-link active">Главная</a></li>
                 <li class="nav-list"><a href="{% url 'diagnostics' %}" class="nav-item nav-link">Диагностика</a></li>
                 <li class="nav-list"><a href="{% url 'service' %}" class="nav-item nav-link">Медицинские услуги</a></li>
