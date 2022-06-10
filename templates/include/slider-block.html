@@ -14,12 +14,12 @@
 </div>
 <div class="bg-light rounded p-3 mb-3">
     <div class="bg-white border rounded p-3">
-        <h6>Стол информации</h6>
+        <h6><a href="{% url 'articles' %}">Стол информации</a></h6>
         <ul>
-            <li><a href="#">С чего начать</a></li>
-            <li><a href="#">Мотивы и цены</a></li>
-            <li><a href="#">Выбор клиники</a></li>
-            <li><a href="#">Коротко о Германии</a></li>
+            <li><a href="{% url 'treatment' %}">С чего начать</a></li>
+            <li><a href="{% url 'motivation' %}">Мотивы и цены</a></li>
+            <li><a href="{% url 'clinic_articles' %}">Выбор клиники</a></li>
+            <li><a href="{% url 'general' %}">Коротко о Германии</a></li>
         </ul>
         <h6>Визовая поддержка</h6>
         <a href="{% static 'files/visa-for-germany-in-russia.pdf' %}" target="_blank"><i class="fa fa-file-pdf" style="margin-right: 5px"></i> <span>Анкета для получения визы в Германию</span></a>

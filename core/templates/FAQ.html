@@ -13,7 +13,7 @@
             <div aria-labelledby="headingOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample" id="collapseOne">
                 <div class="accordion-body">
                     В рубрике «контактная информация» есть форма анкеты-заявки, заполните её и отошлите нам со всеми необходимыми документами любым из доступных вам способов: 
-                    электронной почтой bavariamed@gmail.com или по факсу 00498933096397. Консультацию вы можете также получить по любому из перечисленных телефонов или по скайпу.
+                    электронной почтой <a href="mailto:{{ email }}">{{ email }}</a> или по факсу <a href="tel:{{ tel_number.href }}">{{ tel_number.format }}</a>. Консультацию вы можете также получить по любому из перечисленных телефонов или по скайпу.
                     Мы ответим на вашу заявку и скординируем ваши действия.
                 </div>
             </div>
@@ -41,18 +41,6 @@
                 <div class="accordion-body">
                     Для начала мы даем подтверждение от клиники о готовности приёма на лечение. Подготовка всей документации обычно занимает одну неделю. 
                     Однако в экстренных случаях возможен оформление визы в срочном случае.
-                </div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="headingR05">
-                <button aria-controls="collapseR05" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseR05" data-bs-toggle="collapse" type="button">
-                    В какой срок с момента первого обращения клиент может начать лечение?
-                </button>
-            </h2>
-            <div aria-labelledby="headingR05" class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseR05">
-                <div class="accordion-body">
-                    Если у вас есть Шенгенская виза, то приезд возможен через 24 часа.
                 </div>
             </div>
         </div>
