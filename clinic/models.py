@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 
 from imagekit.models import ProcessedImageField
 from imagekit.processors import ResizeToFill 
@@ -17,10 +17,7 @@ def upload_to_img(instance, filename):
 class Clinic(models.Model):
     title = models.CharField(_('Название'), max_length=255)
     slug = models.SlugField(null=True, blank=True)
-    descriptions = RichTextField(_('Описание'))
-    image = ProcessedImageField(verbose_name=_('Фото'), upload_to=upload_to_img, format='webp',
-                                processors=[ResizeToFill(756, 425)], options={'quality': 90})
-    
+    descriptions = RichTextUploadingField(_('Описание'))
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
@@ -32,6 +29,6 @@ class Clinic(models.Model):
         super(Clinic, self).save(*args, **kwargs)
 
     class Meta:
-        ordering = ('-created_at',)
+        ordering = ('created_at',)
         verbose_name = _('Клиника')
         verbose_name_plural = _('Клиники')
