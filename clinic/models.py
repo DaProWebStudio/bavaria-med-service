@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
 
 from ckeditor_uploader.fields import RichTextUploadingField
@@ -20,6 +21,9 @@ class Clinic(models.Model):
     descriptions = RichTextUploadingField(_('Описание'))
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    
+    def get_absolute_url(self):
+        return reverse('clinic-detail', kwargs={'slug': self.slug})
     
     def __str__(self):
         return str(self.title)

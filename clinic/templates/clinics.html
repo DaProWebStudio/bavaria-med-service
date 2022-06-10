@@ -14,7 +14,7 @@
     
     <ul>
         {% for clinic in clinics %}
-            <li><a href="{{ clinic.get_abs }}">{{ clinic.title }}</a></li>
+            <li><a href="{{ clinic.get_absolute_url }}">{{ clinic.title }}</a></li>
         {% endfor %}
     </ul>
 
