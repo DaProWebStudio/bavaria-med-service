@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     # add app
     'core.apps.CoreConfig',
     'service.apps.ServiceConfig',
-    'clinic.apps.ClinicConfig',
     'feedback.apps.FeedbackConfig',
 ]
 
