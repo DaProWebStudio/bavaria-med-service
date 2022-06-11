@@ -3,6 +3,9 @@ from django.utils.safestring import mark_safe
 
 from .models import Doctor
 
+admin.site.site_title = 'Админ-панель сайта «Bavaria Med Service»'
+admin.site.site_header = 'Админ-панель сайта «Bavaria Med Service»'
+
 
 @admin.register(Doctor)
 class DoctorAdmin(admin.ModelAdmin):
