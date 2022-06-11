@@ -1,9 +1,7 @@
-from typing import Any
-
 from django.utils import timezone
 
 
-def getting_info(request: Any) -> dict[str, Any]:
+def getting_info(request):
     domen = 'https://btk.kg'
     current_path = request.get_full_path()
     current_url = f'{domen}{current_path}'
