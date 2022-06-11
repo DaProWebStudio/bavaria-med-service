@@ -1,7 +1,8 @@
 from django.contrib import admin
 from django.utils.safestring import mark_safe
 
-from .models import Doctor
+from service.models import Service
+from .models import Clinic, Doctor
 
 admin.site.site_title = 'Админ-панель сайта «Bavaria Med Service»'
 admin.site.site_header = 'Админ-панель сайта «Bavaria Med Service»'
@@ -29,3 +30,8 @@ class DoctorAdmin(admin.ModelAdmin):
     
     get_photo.short_description = 'Миниатюра'
 
+
+@admin.register(Clinic)
+class ClinicAdmin(admin.ModelAdmin):
+    list_display = ('title', 'created_at')
+    exclude = ['slug']

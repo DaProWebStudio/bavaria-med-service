@@ -1,8 +1,7 @@
 from django.shortcuts import render
-from django.views.generic import View, TemplateView
+from django.views.generic import ListView, TemplateView
 
-from clinic.models import Clinic
-from core.models import Doctor
+from .models import Clinic, Doctor
 
 from .mixins import ViewMixin
 from . import pages_info as info
@@ -18,7 +17,29 @@ class IndexView(TemplateView):
         context["doctors"] = Doctor.objects.all()
         return context
     
+
+
+class ClinicsView(ListView):
+    model = Clinic
+    context_object_name = 'clinics'
+    extra_context = {
+        "title": info.clinic_title, 
+        "description": info.clinic_description
+        }
+    template_name = 'clinics.html'
     
+    
+class ClinicDetailView(TemplateView):
+    template_name = 'clinic_detail.html'
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["clinic"] = Clinic.objects.get(slug=kwargs.get('slug'))
+        context["title"] = context["clinic"].title
+        context["description"] = info.clinic_description
+        return context
+
+
 class FAQView(ViewMixin):
     title = info.faq_title
     description = info.faq_description
@@ -50,7 +71,7 @@ class MotivationArticlesView(ViewMixin):
     
     
 class ClinicArticlesView(ViewMixin):
-    title = info.clinic_title
+    title = info.clinic_ar_title
     description = info.articles_description
     template_name = 'articles/clinic.html'
     

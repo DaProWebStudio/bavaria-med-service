@@ -4,9 +4,11 @@ from core import views
 
 articles = 'articles'
 
-
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
+    path('clinics/', views.ClinicsView.as_view(), name='clinics'),
+    path('clinics/<slug:slug>/', views.ClinicDetailView.as_view(), name='clinic-detail'),
+    
     path('faq/', views.FAQView.as_view(), name='faq'),
     path('contact/', views.ContactView.as_view(), name='contact'),
     
