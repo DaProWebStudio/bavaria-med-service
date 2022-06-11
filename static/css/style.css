@@ -4,12 +4,13 @@
     --secondary: #FF6922;
     --light: #EFFDF5;
     --dark: #1266a1;
+    --title: #0E2E50;
+    --black: #000000;
 }
-
 
 .company {
     background-color: #fff !important;
-} 
+}
 
 .company .info_company {
     display: flex !important;
@@ -88,12 +89,14 @@
     background-color: #1266a1;
     border-radius: 10px;
 }
+
 .edu_cloud_btn a {
     padding: 8px 15px !important;
     background-color: transparent;
     border: none;
     transition: background .3s linear;
 }
+
 .edu_cloud_btn a:first-child {
     border-top-left-radius: 10px;
     border-top-right-radius: 0;
@@ -101,6 +104,7 @@
     border-bottom-right-radius: 0;
     padding-right: 20px !important;
 }
+
 .edu_cloud_btn a:last-child {
     border-top-left-radius: 0;
     border-top-right-radius: 10px;
@@ -108,7 +112,7 @@
     border-bottom-right-radius: 10px;
 }
 
-.edu_cloud_btn a:hover{
+.edu_cloud_btn a:hover {
     background-color: var(--primary) !important;
 }
 
@@ -126,7 +130,10 @@
     width: 100%;
 } */
 
-.margin-position {display: none;}
+.margin-position {
+    display: none;
+}
+
 .margin-position-active {
     display: block;
     height: 20%;
@@ -232,7 +239,7 @@
     background: var(--dark);
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
     color: #DDDDDD;
 }
 
@@ -277,7 +284,7 @@
     transition: .5s;
 }
 
-.cat-item:hover div {    
+.cat-item:hover div {
     background: var(--primary);
     border-color: transparent;
 }
@@ -402,7 +409,7 @@
     align-items: center;
     justify-content: center;
     color: var(--light);
-    border: 1px solid rgba(255,255,255,0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 35px;
     transition: .3s;
 }
@@ -437,7 +444,7 @@
 }
 
 .footer .form-control {
-    border-color: rgba(255,255,255,0.5);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 .footer .copyright {
@@ -475,7 +482,9 @@
 .cat-item-active {
     background-color: var(--primary) !important;
     color: var(--light);
-} .cat-item-active h6 {
+}
+
+.cat-item-active h6 {
     color: var(--light);
 }
 
@@ -488,12 +497,15 @@
 .mega-banner {
     text-align: center;
 }
+
 .mega-banner div {
     border-left: 2px solid rgba(255, 255, 255, 0.514);
 }
+
 .mega-banner div:first-child {
     border-left: none;
 }
+
 .mega-banner h4 a {
     font-size: 18px;
     color: var(--light);
@@ -516,11 +528,17 @@
     margin: 1.5em 0 0.5em 0;
 }
 
-#price tr, #price th {
+#price tr,
+#price th {
     padding: 10px;
 }
 
-thead, tbody, tfoot, tr, td, th {
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
     border-width: 1px !important;
 }
 
@@ -533,13 +551,234 @@ thead, tbody, tfoot, tr, td, th {
 }
 
 /* Наши врачи */
-
-
-.owl-stage {
+.doctor-carousel .owl-stage {
     height: 350px !important;
 }
 
 
 .form-email::placeholder {
     color: white;
+}
+
+/* Diagnostic */
+.catalog__tabs {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    padding-left: 0
+}
+
+.catalog__tab {
+    width: 200px;
+    border: 2px solid #d0d0d0;
+    color: #6b6b6b;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 48px;
+    cursor: pointer;
+    transition: .5s all;
+    
+}
+.catalog__tab:nth-child(1){
+    border-right:none;
+}
+.catalog__tab:nth-child(2){
+    border-left:none;
+}
+
+.catalog__tab_active {
+    color: #fff;
+    background-color: var(--dark);
+    border-color: var(--dark);
+}
+
+.catalog__content {
+    margin-top: 20px;
+    display: none;
+    justify-content: space-between;
+    flex-wrap: wrap
+}
+
+.catalog__content_active {
+    display: flex
+}
+
+.catalog-item {
+    width: 300px;
+    height: 100%;
+    border: 2px solid #e8e8e8;
+    padding: 20px;
+    margin-bottom: 20px
+}
+
+.catalog-item__img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: 200px
+}
+
+.catalog-item__subtitle {
+    color: var(--title);
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.catalog-item__descr {
+    margin-top: 16px;
+    color: #0d0d0d;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center
+}
+
+.catalog-item__link {
+    display: block;
+    margin-top: 17px;
+    color: var(--dark);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: underline;
+    text-align: center;
+    text-transform: uppercase
+}
+
+.catalog-item__link:hover {
+    color: var(--dark)
+}
+
+
+.catalog-item__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.catalog-item__old-price {
+    color: #555;
+    font-size: 14px;
+    font-weight: 300;
+    text-decoration: line-through
+}
+
+.catalog-item__price {
+    color: #050505;
+    font-size: 20px;
+    font-weight: 700
+}
+
+.catalog-item__wrapper {
+    display: flex;
+}
+
+
+.catalog-item__list {
+    position: relative;
+    width: 50%;
+    margin-left: 20px;
+    transform: translateX(0);
+    padding-right: 20px;
+    transition: .5s all;
+    padding-left: 19px;
+    margin-bottom: 0;
+    list-style-type: none
+}
+
+.catalog-item__list_active {
+    transform: translateX(-100%);
+    margin-left: 0
+}
+
+.catalog-item__list li {
+    position: relative;
+    color: #555;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 20px
+}
+
+.catalog-item__list li:before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: var(--dark);
+    left: -14px;
+    top: 7px
+}
+
+.catalog-item__back {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(calc(-50% - 19px));
+    display: block;
+    color: var(--dark);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: underline;
+    text-transform: uppercase
+}
+
+.catalog-item__back:hover {
+    color: var(--dark)
+}
+
+.day__dec {
+    margin-top: 10px;
+    color: var(--black);
+}
+
+.day__dec .span {
+    font-size: 40px;
+}
+
+.dia-icon {
+    color: var(--primary);
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.text__dia {
+    font-size: 14px;
+    border-bottom: 1px solid var(--primary);
+    padding: 10px 0;
+}
+
+.text__dia:last-child {
+    border-bottom: none;
+}
+
+
+/* sidebar */
+.sidebar__box-block {
+    position: sticky;
+    top: 60px;
+}
+
+
+/* Contacts */
+.i_agree {
+    display: flex;
+    align-items: center;
+}
+.i_agree input {
+    height: 30px !important;
+    width: 30px !important;
+    margin-right: 10px !important;
+}
+
+.i_agree label {
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }

@@ -49,42 +49,8 @@
 <!-- Property List Start -->
 <div class="container-xxl py-4">
     <div class="container">
-        <div class="text-start mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s">
-            <h3 class="mb-3 text-center">Программы по диагностике все включено</h3>
-            <p style="text-align: justify;">
-                Эффективное лечение в Европе невозможно без качественной диагностики. Поэтому, прежде чем планировать лечение в Германии, 
-                необходимо приложить выяснение природы заболевания. Диагностика в Германии включает широкие лабораторные исследования, 
-                магнитно-резонансную томографию внутренних органов, ультразвуковое исследование и ряд других тестов.
-            </p>
-        </div>
-            
-        <div class="tab-content">
-            <div id="university" class="tab-pane fade show p-0 active">
-                <div class="row g-4">
-
-                    {% for clinic in clinics %}
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="property-item rounded overflow-hidden">
-                                <div class="position-relative overflow-hidden">
-                                    <a href="">{% generateimage 'clinic:thumbnail' source=clinic.image -- class="mypicture" %}</a>
-                                    <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">
-                                        Мюнхен
-                                    </div>
-                                </div>
-                                <div class="p-4 pb-0">
-                                    <a class="d-block h5 mb-2" href="">{{ clinic.title }}</a>
-                                </div>
-                            </div>
-                        </div>
-                    {% endfor %}
-                    
-                    <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <a class="btn btn-primary py-3 px-5" href="">Показать все</a>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
+        <h3 class="mb-3 text-center">Программы по диагностике все включено</h3>
+        {% include 'include/diagnostics-block.html' %}        
     </div>
 </div>
 <!-- Property List End -->
