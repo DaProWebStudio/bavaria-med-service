@@ -21,7 +21,7 @@ class Doctor(models.Model):
     image = ProcessedImageField(verbose_name=_('Фото'), upload_to=upload_to_img, format='webp',
                                 processors=[ResizeToFill(300, 360)], options={'quality': 90})
     
-    created_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField("Созданно", auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
     

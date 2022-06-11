@@ -8,14 +8,13 @@ from .mixins import ViewMixin
 from . import pages_info as info
 
 
-class IndexView(ViewMixin):
-    title = info.index_title
-    description = info.index_description
+class IndexView(TemplateView):
     template_name = 'index.html'
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["clinics"] = Clinic.objects.all()[:6]
+        context['title'] = info.index_title
+        context['description'] = info.index_description
         context["doctors"] = Doctor.objects.all()
         return context
     

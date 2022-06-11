@@ -531,3 +531,15 @@ thead, tbody, tfoot, tr, td, th {
     border: 1px solid #DCDCDC;
     color: #0E2E50;
 }
+
+/* Наши врачи */
+
+
+.owl-stage {
+    height: 350px !important;
+}
+
+
+.form-email::placeholder {
+    color: white;
+}

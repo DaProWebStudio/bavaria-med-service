@@ -5,4 +5,4 @@ from .models import Service
 @admin.register(Service)
 class ServiceNews(admin.ModelAdmin):
     list_display = ('title', 'created_at')
-    exclude = ['slug']
+    exclude = ['slug', 'image']
