@@ -8,7 +8,6 @@
     --black: #000000;
 }
 
-
 .company {
     background-color: #fff !important;
 }
@@ -551,12 +550,17 @@ th {
     color: #0E2E50;
 }
 
-
-/* Diagnostic */
-.catalog {
-    padding-bottom: 50px
+/* Наши врачи */
+.doctor-carousel .owl-stage {
+    height: 350px !important;
 }
 
+
+.form-email::placeholder {
+    color: white;
+}
+
+/* Diagnostic */
 .catalog__tabs {
     list-style-type: none;
     display: flex;
@@ -798,4 +802,25 @@ th {
     left: 5px;
     bottom: 0;
     font-size: 18px;
+}
+
+/* Contacts */
+.i_agree {
+    display: flex;
+    align-items: center;
+}
+.i_agree input {
+    height: 30px !important;
+    width: 30px !important;
+    margin-right: 10px !important;
+}
+
+.i_agree label {
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
