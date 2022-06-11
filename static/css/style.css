@@ -752,9 +752,50 @@ th {
 
 
 /* sidebar */
-
-
 .sidebar__box-block {
     position: sticky;
     top: 60px;
+}
+
+/* accommodation */
+
+.accommodation__block {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.accommodation__item {
+    width: 300px;
+    height: 100%;
+    border: 2px solid #e8e8e8;
+    padding: 40px 20px 20px 20px;
+    text-align: center;
+}
+
+.startion {
+    color: var(--primary);
+    font-size: 17px;
+}
+
+.startion-top {
+    transform: translateY(-15px);
+    font-size: 20px;
+}
+
+.startion-one {
+    transform: translateY(-28px);
+    font-size: 27px;
+}   
+
+.price {
+    color: var(--dark);
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.price sub {
+    display: inline-block;
+    left: 5px;
+    bottom: 0;
+    font-size: 18px;
 }
