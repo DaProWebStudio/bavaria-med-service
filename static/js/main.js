@@ -176,8 +176,26 @@ function toggleSlide(item) {
 toggleSlide('.catalog-item__link');
 toggleSlide('.catalog-item__back');
 
-
-
 // slider-diagnostic
 
-const slider = document.querySelector('.catalog__content catalog__content_active')
+const slider = document.querySelector('.catalog__content catalog__content_active');
+
+// treatment
+$('ul.treatment__list').on('click', 'li:not(.treatment__item-active)', function() {
+    $(this)
+      .addClass('treatment__item-active').siblings().removeClass('treatment__item-active')
+      .closest('div.container').find('div.treatment__content').removeClass('treatment__content_active').eq($(this).index()).addClass('treatment__content_active');
+});
+
+function toggleSlide(item) {
+    $(item).each(function(i) {
+        $(this).on('click', function(e) {
+            e.preventDefault();
+            $('.treatment__content').eq(i).toggleClass('treatment__content_active');
+            $('.treatment__content-list').eq(i).toggleClass('treatment__content-list_active');
+        })
+    });
+};
+
+toggleSlide('.treatment__content-list');
+toggleSlide('.treatment__content-back');
