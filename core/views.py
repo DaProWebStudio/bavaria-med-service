@@ -18,7 +18,6 @@ class IndexView(TemplateView):
         return context
     
 
-
 class ClinicsView(ListView):
     model = Clinic
     context_object_name = 'clinics'
@@ -26,11 +25,11 @@ class ClinicsView(ListView):
         "title": info.clinic_title, 
         "description": info.clinic_description
         }
-    template_name = 'clinics.html'
+    template_name = 'clinics/clinics.html'
     
     
 class ClinicDetailView(TemplateView):
-    template_name = 'clinic_detail.html'
+    template_name = 'clinics/clinic_detail.html'
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
