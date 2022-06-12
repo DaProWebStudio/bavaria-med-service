@@ -18,7 +18,6 @@ class IndexView(TemplateView):
         return context
     
 
-
 class ClinicsView(ListView):
     model = Clinic
     context_object_name = 'clinics'
@@ -26,11 +25,11 @@ class ClinicsView(ListView):
         "title": info.clinic_title, 
         "description": info.clinic_description
         }
-    template_name = 'clinics.html'
+    template_name = 'clinics/clinics.html'
     
     
 class ClinicDetailView(TemplateView):
-    template_name = 'clinic_detail.html'
+    template_name = 'clinics/clinic_detail.html'
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -80,3 +79,39 @@ class GeneralArticlesView(ViewMixin):
     title = info.general_title
     description = info.articles_description
     template_name = 'articles/general.html'
+    
+    
+def custom_page_not_found_view(request, exception=None):
+    context = {
+        'code': '404',
+        'title': 'Страница не найдена',
+        'description': 'Ой! Страница, которую вы ищете, не существует. Он мог быть перемещен или удален.'
+    }
+    return render(request, "errors/handler_errors.html", context)
+
+
+def custom_error_view(request, exception=None):
+    context = {
+        'code': '500',
+        'title': 'Внутренняя ошибка сервера',
+        'description': 'Мы уже устраняем неисправность, попробуте обновить страницу через некоторое время. Приносим извинения за временные неудобства.'
+    }
+    return render(request, "errors/handler_errors.html", context)
+
+
+def custom_permission_denied_view(request, exception=None):
+    context = {
+        'code': '403',
+        'title': 'Запрещено',
+        'description': 'К сожалению, у вас нет прав доступа к страницу на этом сайте!'
+    }
+    return render(request, "errors/handler_errors.html", context)
+
+
+def custom_bad_request_view(request, exception=None):
+    context = {
+        'code': '400',
+        'title': 'Плохой запрос',
+        'description': 'Ваш браузер отправил запрос, который этот сервер не смог понять!'
+    }
+    return render(request, "errors/handler_errors.html", context)

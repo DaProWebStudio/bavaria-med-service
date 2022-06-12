@@ -1,8 +1,11 @@
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.sitemaps.views import sitemap
 from django.contrib import admin
 from django.urls import path, include
 
+from core.sitemaps import sitemaps, robots_txt
+ 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -10,6 +13,9 @@ urlpatterns = [
     path('service/', include('service.urls')),
     path('contacts/', include('feedback.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
+    path('sitemap.xml/', sitemap, {'sitemaps': sitemaps}, 
+         name='django.contrib.sitemaps.views.sitemap'),
+    path("robots.txt/", robots_txt),
 ]
 
 if settings.DEBUG:
@@ -17,3 +23,8 @@ if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     import debug_toolbar
     urlpatterns += (path('__debug__/', include(debug_toolbar.urls)),)
+    
+handler404 = 'core.views.custom_page_not_found_view'
+handler500 = 'core.views.custom_error_view'
+handler403 = 'core.views.custom_permission_denied_view'
+handler400 = 'core.views.custom_bad_request_view'

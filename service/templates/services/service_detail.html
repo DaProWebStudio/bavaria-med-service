@@ -1,0 +1,21 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content-xxl %}
+<div class="diagnostics p-3">
+    <a href="{% url 'clinics' %}"><i class="fa fa-angles-left"></i> Медицинские услуги по специализациям</a>
+
+    {% autoescape off %}{{ service.descriptions }}{% endautoescape %}
+
+    {% if clinics %}
+        <div class="clinics mt-4">
+            <h4>Специализированные клиники в Германии</h3>
+            <ul>
+                {% for obj in clinics %}
+                    <li><a href="{% url 'clinic-detail' obj.clinic__slug %}">{{ obj.clinic__title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+</div>
+{% endblock content-xxl %}

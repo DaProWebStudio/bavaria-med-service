@@ -2,15 +2,17 @@ from random import randint
 
 from django.views.generic import FormView
 
+from core.mixins import ViewMixin
+
 from .models import Recaptcha
 from .forms import CreateStatementForm
-from . import pages_info as info
-
+from feedback import pages_info as info
+from .tasks import send_statement
     
 class ContactView(FormView):
     form_class = CreateStatementForm
     template_name = 'contact.html'
-    success_url = '/thanks/'
+    success_url = '/contact/thanks/'
 
     @staticmethod
     def get_recaptcha(**kwargs):
@@ -29,5 +31,12 @@ class ContactView(FormView):
         data = self.request.POST.get
         if int(data('answer_user')) == int(data('answer_recaptcha')):
             form.save()
+            form.send_statement()
             return super().form_valid(form)
         return self.render_to_response(self.get_context_data(errors=True))
+
+
+class ThanksView(ViewMixin):
+    title = 'Спасибо за заявку!'
+    description = 'Наш консультант перезвонит вам в течение нескольких часов.'
+    template_name = 'email/success_send_statement.html'

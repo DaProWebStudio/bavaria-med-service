@@ -10,7 +10,6 @@ urlpatterns = [
     path('clinics/<slug:slug>/', views.ClinicDetailView.as_view(), name='clinic-detail'),
     
     path('faq/', views.FAQView.as_view(), name='faq'),
-    path('contact/', views.ContactView.as_view(), name='contact'),
     
     path(f'{articles}/', views.ArticlesView.as_view(), name='articles'),
     path(f'{articles}/treatment/', views.TreatmentArticlesView.as_view(), name='treatment'),
