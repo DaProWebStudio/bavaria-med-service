@@ -23,7 +23,10 @@ class Service(models.Model):
     def get_absolute_url(self):
         return reverse('service-detail', kwargs={'slug': self.slug})
     
-    def __str__(self):
+    def get_letter(self) -> str:
+        return self.title[:1].upper()
+    
+    def __str__(self) -> str:
         return str(self.title)
 
     def save(self, *args, **kwargs):
@@ -34,6 +37,25 @@ class Service(models.Model):
         ordering = ('-created_at',)
         verbose_name = _('Услуга')
         verbose_name_plural = _('Услуги')
+
+
+class ServiceLetter(models.Model):
+    letter = models.CharField(_('Буква'), max_length=1, unique=True)
+    letter_en = models.CharField(_('Буква на латинском'), max_length=2, blank=True, null=True)
+    services = models.ManyToManyField(Service, verbose_name="Услуги", related_name='letterServices')
+    
+    def __str__(self):
+        return f"Буква - {str(self.letter)}"
+    
+    def save(self, *args, **kwargs):
+        self.letter = self.letter.upper()
+        self.letter_en = translit_slug(self.letter)
+        super(ServiceLetter, self).save(*args, **kwargs)
+    
+    class Meta:
+        ordering = ('letter',)
+        verbose_name = _('Буква')
+        verbose_name_plural = _('Буквы')
 
         
 class ClinicService(models.Model):
