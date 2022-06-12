@@ -23,3 +23,8 @@ if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     import debug_toolbar
     urlpatterns += (path('__debug__/', include(debug_toolbar.urls)),)
+    
+handler404 = 'core.view.custom_page_not_found_view'
+handler500 = 'core.view.custom_error_view'
+handler403 = 'core.view.custom_permission_denied_view'
+handler400 = 'core.view.custom_bad_request_view'
