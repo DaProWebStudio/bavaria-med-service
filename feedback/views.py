@@ -7,7 +7,7 @@ from core.mixins import ViewMixin
 from .models import Recaptcha
 from .forms import CreateStatementForm
 from feedback import pages_info as info
-from .tasks import send_statement
+
     
 class ContactView(FormView):
     form_class = CreateStatementForm
