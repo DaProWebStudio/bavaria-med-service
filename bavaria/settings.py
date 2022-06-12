@@ -135,10 +135,18 @@ MEDIA_DIR = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Email Settings
+EMAIL_USE_TLS = True
+EMAIL_HOST = os.environ.get("EMAIL_HOST")
+EMAIL_TITLE_FROM = os.environ.get("EMAIL_TITLE_FROM")
+EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
+EMAIL_PORT = 587
+SERVER_EMAIL = EMAIL_HOST_USER
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
-
-
 CKEDITOR_CONFIGS = {
     'default': {
         'skin': 'moono',
