@@ -8,9 +8,9 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <i class="bi bi-exclamation-triangle display-1 text-primary"></i>
-                    <h1 class="display-1">400</h1>
-                    <h1 class="mb-4">Плохой запрос</h1>
-                    <p class="mb-4">Ваш браузер отправил запрос, который этот сервер не смог понять!</p>
+                    <h1 class="display-1">{{ code }}</h1>
+                    <h1 class="mb-4">{{ title }}</h1>
+                    <p class="mb-4">{{ description }}</p>
                     <a class="btn btn-primary py-3 px-5" href="{% url 'index' %}">На главную страницу</a>
                 </div>
             </div>
