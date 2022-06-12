@@ -51,7 +51,6 @@
     </style>
 </head>
 <body>
-
     <table background="https://btk.kg/static/images/edo_btk/1-2.jpg">
         <tbody>
             <tr>
@@ -62,15 +61,14 @@
                                 <tr>
                                     <td>
                                         <div class="logo">
-                                            <img src="https://btk.kg/static/images/edo_btk/EDOBTK.svg" alt="">
+                                            <img src="http://bavariamed.ru/objects/img/dot.gif" alt="">
                                         </div>
                                         <div class="content">
-                                            <h1>Уважаемый(-ая) {{ full_name }}!</h1>
-
-                                            {% for i in body %}
-                                                <p style="text-align: justify">{{ i|safe }}</p>
-                                            {% endfor %}
-
+                                            <p>Ф.И.О: {{ full_name }}</p>
+                                            <p>Эл. почта: {{ email }}</p>
+                                            <p>Телефон: {{ phone }}</p>
+                                            <p>Страна или город: {{ region }}</p>
+                                            <p>Сообщение: {{ message }}</p>
                                             <hr color="#fff">
                                             <p class="p" style="text-align: justify">C уважением, Администрация сайта <a href="http://edo.btk.kg/">edo.btk.kg</a>.</p>
                                         </div>
