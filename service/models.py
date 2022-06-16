@@ -84,7 +84,6 @@ class ServiceCarousel(models.Model):
     descriptions = models.TextField(_('Описание'))
     url = models.CharField('Ссылка на сервис', max_length=255, blank=True, null=True)
     service = models.ForeignKey(Service, on_delete=models.CASCADE)    
-    random = RandomManager()
     objects = models.Manager()
     
     def __str__(self):
