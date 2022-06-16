@@ -1,3 +1,5 @@
+import math
+import random
 from django.db import models
 from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
@@ -34,7 +36,7 @@ class Service(models.Model):
         super(Service, self).save(*args, **kwargs)
 
     class Meta:
-        ordering = ('-created_at',)
+        ordering = ('-title',)
         verbose_name = _('Услуга')
         verbose_name_plural = _('Услуги')
 
@@ -49,7 +51,7 @@ class ServiceLetter(models.Model):
     
     def save(self, *args, **kwargs):
         self.letter = self.letter.upper()
-        self.letter_en = translit_slug(self.letter)
+        self.letter_en = translit_slug(self.letter.lower())
         super(ServiceLetter, self).save(*args, **kwargs)
     
     class Meta:
@@ -70,11 +72,20 @@ class ClinicService(models.Model):
         verbose_name_plural = _('Специализированные клиники')
 
 
+class RandomManager(models.Manager):
+    def get_queryset(self):
+        max_id = int(super().get_queryset().aggregate(models.Max('id'))['id__max'])
+        min_id = math.ceil(max_id*random.random())
+        return super().get_queryset().filter(id__gte=min_id)
+
+
 class ServiceCarousel(models.Model):
     title = models.CharField(_('Название'), max_length=255)
     descriptions = models.TextField(_('Описание'))
     url = models.CharField('Ссылка на сервис', max_length=255, blank=True, null=True)
     service = models.ForeignKey(Service, on_delete=models.CASCADE)    
+    random = RandomManager()
+    objects = models.Manager()
     
     def __str__(self):
         return str(self.title)

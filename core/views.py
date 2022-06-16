@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.views.generic import ListView, TemplateView
 
+from service.models import ServiceCarousel
+
 from .models import Clinic, Doctor
 
 from .mixins import ViewMixin
@@ -35,6 +37,17 @@ class ClinicDetailView(TemplateView):
         context = super().get_context_data(**kwargs)
         context["clinic"] = Clinic.objects.get(slug=kwargs.get('slug'))
         context["title"] = context["clinic"].title
+        context["description"] = info.clinic_description
+        return context
+
+
+class DoctorDetailView(TemplateView):
+    template_name = 'doctor-detail.html'
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["doctor"] = Doctor.objects.get(slug=kwargs.get('slug'))
+        context["title"] = context["doctor"].full_name
         context["description"] = info.clinic_description
         return context
 

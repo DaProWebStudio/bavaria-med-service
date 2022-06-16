@@ -65,11 +65,11 @@
             {% for doctor in doctors %}
                 <div class="wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item rounded overflow-hidden">
-                        <div class="position-relative">
+                        <a href="{{ doctor.get_absolute_url }}" class="position-relative">
                             <img class="img-fluid img-doctor" src="{{ doctor.image.url }}" alt="{{ doctor.full_name }}">
-                        </div>
+                        </a>
                         <div class="text-center mt-3">
-                            <h5 class="fw-bold mb-0">{{ doctor.full_name }}</h5>
+                            <h5 class="fw-bold mb-0"><a href="{{ doctor.get_absolute_url }}">{{ doctor.full_name }}</a></h5>
                             <small>{{ doctor.position }}</small>
                         </div>
                     </div>

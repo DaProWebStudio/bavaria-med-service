@@ -99,7 +99,7 @@
         smartSpeed: 1000,
         margin: 24,
         dots: false,
-        loop: true,
+        loop: false,
         nav : true,
         navText : false,
         responsive: {

@@ -1,0 +1,17 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content-xxl %}
+<section class="doctor p-3 pt-0">
+    <div class="row">
+        <div class="col-lg-4 col-12 text-center">
+            <img src="{{ doctor.image.url }}" alt="{{ doctor.full_name }}">
+            <h4 class="mt-3">{{ doctor.full_name }}</h4>
+            <p>{{ doctor.position }}</p>
+        </div>
+        <div class="col-lg-8 col-12 p-3">
+            {% autoescape off %}{{ doctor.description }}{% endautoescape %}
+        </div>
+    </div>
+</section>
+{% endblock content-xxl %}

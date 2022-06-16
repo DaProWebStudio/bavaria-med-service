@@ -907,3 +907,45 @@ th {
     opacity: 1;
 }
 
+
+/* services */
+.services_letter {
+    margin: 0 15px 15px 15px;
+}
+.services_letter .letters__content .btn {
+    font-size: 20px;
+    transition: all .2s linear;
+}
+
+.services_letter .letters__content .active,
+.services_letter .letters__content .btn:hover {
+    background-color: var(--dark);
+    border-color: var(--dark);
+}
+
+.services__content {
+    padding: 15px 0;
+}
+
+.services__content .service__item {
+    margin: 5px;
+}
+
+.services__content .service__item {
+    display: inline-block;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 2px solid var(--primary);
+    transition: all 0.2s linear;
+}
+
+.services__content .service__item:hover {
+    background-color: var(--primary);
+    color: var(--light) !important;
+}
+
+.diagnostics-list li {
+    margin-top: 10px;
+}

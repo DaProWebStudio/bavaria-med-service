@@ -3,7 +3,10 @@
 
 {% block content-xxl %}
 <div class="diagnostics p-3">
-    <a href="{% url 'clinics' %}"><i class="fa fa-angles-left"></i> Медицинские услуги по специализациям</a>
+    <a href="{% url 'service' %}" class="mt-5">
+        <i class="fa fa-angles-left"></i> 
+        Медицинские услуги по специализациям
+    </a>
 
     {% autoescape off %}{{ service.descriptions }}{% endautoescape %}
 

@@ -137,6 +137,7 @@
         border-top: none;
         padding-top: 0;
     }
+    
 }
 
 @media (max-width: 768px) {
@@ -178,6 +179,16 @@
     }
     .burger {
         right: 20px;
+    }
+    .services__content {
+        padding: 10px 0;    
+    }
+    .services_letter .letters__content .btn {
+        font-size: 14px;
+        margin: 3px;
+    }
+    .services__content .service__item {
+        font-size: 13px;
     }
     
 }

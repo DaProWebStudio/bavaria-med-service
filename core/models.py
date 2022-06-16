@@ -48,6 +48,8 @@ class Doctor(models.Model):
     created_at = models.DateTimeField("Созданно", auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
+    def get_absolute_url(self):
+        return reverse('doctor-detail', kwargs={'slug': self.slug})
     
     def __str__(self):
         return str(self.full_name)
