@@ -1,5 +1,5 @@
 from django.utils import timezone
-from service.models import ServiceCarousel
+from service.models import Service, ServiceCarousel
 
 
 def getting_info(request):
@@ -10,5 +10,5 @@ def getting_info(request):
     tel_number = {'format': '+996 (707) 36-67-44', 'href': '+996707366744'}
     mobile_number = {'format': '+996 (707) 36-67-45', 'href': '+996707366745'}
     email = 'bavariamed@gmail.com'
-    carousels = ServiceCarousel.objects.all().values('title', 'descriptions', 'url')
+    carousels = Service.objects.all().values('title', 'descriptions', 'slug')
     return locals()
