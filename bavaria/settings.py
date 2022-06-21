@@ -92,7 +92,7 @@ DATABASES = {
         "PASSWORD": os.environ.get("DATABASE_PASSWORD", "password"),
         "HOST": os.environ.get("DATABASE_HOST", "localhost"),
         "PORT": os.environ.get("DATABASE_PORT", "5432"),
-        "OPTIONS": {"init_command": os.environ.get("OPTIONS", "")},
+
     }
 }
 
@@ -147,6 +147,10 @@ EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
 EMAIL_PORT = env('EMAIL_PORT')
 SERVER_EMAIL = EMAIL_HOST_USER
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+#Contacts
+TEL_NUMBER = env("TEL_NUMBER").split(':')
+MOBILE_NUMBER = env("MOBILE_NUMBER").split(':')
 
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
