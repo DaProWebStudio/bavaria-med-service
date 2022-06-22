@@ -1,4 +1,4 @@
-bind = '10.10.20.20:8022'
-workers = 1
-user = 'btk_server'
+bind = '62.113.108.108:8000'
+workers = 2
+user = 'root'
 timeout = 120
