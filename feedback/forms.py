@@ -27,7 +27,7 @@ class CreateStatementForm(BaseForm):
         full_name = self.cleaned_data["full_name"]
         title_send = f'На сайт поступило новая завка от {full_name}'
         title, from_email = settings.EMAIL_TITLE_FROM, settings.EMAIL_HOST_USER
-        to_form_1, to_form_2 = 'Adi Kambarov <adikgk@mail.ru>', 'Adi Estebes uulu <adikgk232323@gmail.com>'
+        to_form_1, to_form_2 = 'Regina Polonski <bavariamed@gmail.com>', 'Эльмира <elyajolochu@gmail.com>'
         headers = {'From': f'{title} <{from_email}>'}
         context = {
             'full_name': full_name, 
