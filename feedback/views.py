@@ -12,7 +12,7 @@ from feedback import pages_info as info
 class ContactView(FormView):
     form_class = CreateStatementForm
     template_name = 'contact.html'
-    success_url = '/contact/thanks/'
+    success_url = '/contacts/thanks/'
 
     @staticmethod
     def get_recaptcha(**kwargs):

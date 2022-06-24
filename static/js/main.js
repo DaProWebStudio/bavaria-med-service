@@ -96,10 +96,10 @@
 
     $(".mega-carousel").owlCarousel({
         autoplay: true,
-        smartSpeed: 1000,
+        smartSpeed: 800,
         margin: 24,
         dots: false,
-        loop: false,
+        loop: true,
         nav : true,
         navText : false,
         responsive: {
