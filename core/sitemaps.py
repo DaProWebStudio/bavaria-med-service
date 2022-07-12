@@ -14,8 +14,9 @@ class StaticViewSitemap(Sitemap):
     changefreq = 'daily'
 
     def items(self):
-        core_urls_list = [url.name for url in core_urls.urlpatterns if url.name != 'clinic-detail']
-        service_urls_list = [url.name for url in service_urls.urlpatterns if url.name != 'service-detail']
+        ignore_url = ['clinic-detail', 'doctor-detail', 'service-detail', 'letter-json']
+        core_urls_list = [url.name for url in core_urls.urlpatterns if url.name not in ignore_url]
+        service_urls_list = [url.name for url in service_urls.urlpatterns if url.name not in ignore_url]
         return core_urls_list + service_urls_list
 
     def location(self, item):
