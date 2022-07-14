@@ -10,7 +10,7 @@ from service import urls as service_urls
 
 
 class StaticViewSitemap(Sitemap):
-    priority = 1
+    priority = 0.9
     changefreq = 'daily'
 
     def items(self):
@@ -25,7 +25,7 @@ class StaticViewSitemap(Sitemap):
 
 class ClinicSitemap(Sitemap):  
     changefreq = 'monthly'  
-    priority = 0.9
+    priority = 0.8
   
     def items(self):  
         return Clinic.objects.all()  
@@ -47,7 +47,7 @@ class DoctorSitemap(Sitemap):
 
 class ServiceSitemap(Sitemap):  
     changefreq = 'weekly'  
-    priority = 1
+    priority = 0.9
   
     def items(self):  
         return Service.objects.all()  
